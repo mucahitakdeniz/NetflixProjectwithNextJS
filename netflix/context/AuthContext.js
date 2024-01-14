@@ -34,19 +34,16 @@ const AuthContextProvider = ({ children }) => {
 
   const createUser = async (email, password, displayName) => {
     try {
-      //? yeni bir kullanıcı oluşturmak için kullanılan firebase metodu
       let userCredential = await createUserWithEmailAndPassword(
         auth,
         email,
         password
       );
-      //? kullanıcı profilini güncellemek için kullanılan firebase metodu
       await updateProfile(auth.currentUser, {
         displayName: displayName,
       });
       router.push("/profile");
-      // router.back()
-      // router.forward()
+
       toastSuccessNotify("Registered successfully!");
       console.log(userCredential);
     } catch (err) {
@@ -54,9 +51,7 @@ const AuthContextProvider = ({ children }) => {
     }
   };
 
-  //* https://console.firebase.google.com/
-  //* => Authentication => sign-in-method => enable Email/password
-  //! Email/password ile girişi enable yap
+
   const signIn = async (email, password) => {
     try {
       //? mevcut kullanıcının giriş yapması için kullanılan firebase metodu

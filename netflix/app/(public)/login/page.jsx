@@ -13,7 +13,6 @@ const Login = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     signIn(email, password);
-    // console.log(email, password);
   };
 
   const handleProviderLogin = () => {

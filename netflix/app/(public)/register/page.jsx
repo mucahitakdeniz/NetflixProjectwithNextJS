@@ -4,22 +4,13 @@ import { AuthContext } from "@/context/AuthContext";
 import React, { useContext, useState } from "react";
 
 const Register = () => {
-  //* ayrı stateler
   const [firstName, setFirstName] = useState();
   const [lastName, setLastName] = useState();
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
-  //* birleştirilmiş state
-  // const [info, setInfo] = useState({
-  //   firstName: "",
-  //   lastName: "",
-  //   email: "",
-  //   password: "",
-  // });
 
   const { createUser, signUpProvider } = useContext(AuthContext);
 
-  // const { email, password, firstName, lastName } = info;
 
   const handleSubmit = (e) => {
     const displayName = `${firstName} ${lastName}`;
@@ -29,8 +20,6 @@ const Register = () => {
     console.log(firstName, lastName);
   };
 
-  // const hadleChange = (e) =>
-  //   setInfo({ ...info, [e.target.id]: e.target.value });
 
   const handleProviderLogin = () => {
     signUpProvider();

@@ -7,7 +7,6 @@ import "react-toastify/dist/ReactToastify.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
-//! metadata objesi ve generateMetadata fonksiyonu sadece Server Componentlerden export edilebilir.
 export const metadata = {
   title: "Netflix",
   description: "a movie platform",

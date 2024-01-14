@@ -24,7 +24,6 @@ const Navbar = () => {
                 <h5 className="mr-2 capitalize">{currentUser?.displayName}</h5>
               )}
 
-              {/* Profile dropdown */}
               <Menu as="div" className="relative">
                 <div>
                   <Menu.Button className="flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
