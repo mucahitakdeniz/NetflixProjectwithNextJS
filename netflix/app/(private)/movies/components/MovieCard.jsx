@@ -16,7 +16,6 @@ const MovieCard = ({ poster_path, vote_average, title, release_date, id }) => {
         router.push("movies/" + id);
       }}
     >
-      {/* //? Next.js, import edilen dosyaya göre image genişliğini ve yüksekliğini otomatik olarak belirler ancak Next.js'nin build işlemi sırasında remote dosyalara erişimi olmadığından, genişlik ve yükseklik özelliklerini manuel olarak sağlamanız gerekir. */}
       <Image
         src={poster_path ? IMG_API + poster_path : defaultImage}
         width={160}
