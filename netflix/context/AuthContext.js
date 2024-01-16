@@ -74,7 +74,7 @@ const AuthContextProvider = ({ children }) => {
   };
 
   const userObserver = () => {
-    //? Kullanıcının signin olup olmadığını takip eden ve kullanıcı değiştiğinde yeni kullanıcıyı response olarak dönen firebase metodu
+    // Kullanıcının signin olup olmadığını takip eden ve kullanıcı değiştiğinde yeni kullanıcıyı response olarak dönen firebase metodu
     onAuthStateChanged(auth, (currentUser) => {
       if (currentUser) {
         const { email, displayName, photoURL } = currentUser;
