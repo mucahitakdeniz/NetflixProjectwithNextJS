@@ -2,6 +2,7 @@
 import { useAuthContext } from "@/context/AuthContext";
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
+import { toastSuccessNotify, toastWarnNotify } from "@/helpers/ToastNotify";
 
 export default function PrivateLayout({ children }) {
   const { currentUser } = useAuthContext();
@@ -9,6 +10,7 @@ export default function PrivateLayout({ children }) {
   useEffect(() => {
     const user = JSON.parse(sessionStorage.getItem("user"));
     if (!user) {
+      toastSuccessNotify("You must login");
       router.push("login");
     }
   }, [currentUser]);
